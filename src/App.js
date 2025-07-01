@@ -34,7 +34,7 @@ const translations = {
         ayahLabel: "Ayah", // Added for consistent display of Ayah number
         juzLabel: "Juz'", // Added for consistent display of Juz number
         supportWork: "Support my work!", // New translation for donation message
-        copyrightInfo: "Copyright © 2024 Aina Waradat", // English copyright info
+        copyrightInfo: "Copyright © 2025 Aina Waradat", // English copyright info
         hintButton: "Hint", // New translation for hint button
         messageInvalidSurahName: "Please use menu to choose answer!", // New translation for invalid surah name
         juzs: {
@@ -62,25 +62,25 @@ const translations = {
         revealAnswerButton: "كشف الإجابة",
         returnToMainMenuButton: "العودة إلى القائمة الرئيسية",
         messageNoAyahsPrepared: "لم يتم تجهيز آيات. يرجى العودة للاختيار",
-        messageGuessSurah: "خمن السورة التي تنتمي إليها هذه الآية!",
-        messageCorrect: "صحيح! أحسنت!",
+        messageGuessSurah: "خَمِّن السورة التي وردت فيها هذه الآية",
+        messageCorrect: "!صحيح! أحسنت",
         messageIncorrect: "غير صحيح. حاول مرة أخرى أو اكشف الإجابة", // Changed for retry flow
         messageReveal: "السورة الصحيحة هي",
-        messageNoAudio: "لا يوجد صوت لهذه الآية أو لم يتم اختيار آية.",
+        messageNoAudio: "لا يوجد صوت لهذه الآية أو لم يتم اختيار آية",
         messageNoAyahsSelected: "الرجاء اختيار سورة واحدة على الأقل أو جزء للتحضير",
-        messageMinimumSurahs: "الرجاء اختيار سورتين على الأقل.", // Updated message
-        messageReadyToStart: "جاهز للبدء! تم اختيار %s آيات.", // Corrected pluralization
+        messageMinimumSurahs: "الرجاء اختيار سورتين على الأقل", // Updated message
+        messageReadyToStart: "جاهز للبدء! تم اختيار %s آيات", // Corrected pluralization
         messageFetchingData: "جاري التحميل",
-        messageCouldNotGetAyah: "تعذر الحصول على آية عشوائية. الرجاء المحاولة مرة أخرى.",
+        messageCouldNotGetAyah: "تعذر الحصول على آية عشوائية. الرجاء المحاولة مرة أخرى",
         pointsLabel: "النقاط",
         viewOnQuranCom: "عرض على Quran.com",
         roundRestarted: "تم الإجابة على جميع الآيات! جاري الترتيب العشوائي وبدء جولة جديدة",
         ayahLabel: "آية", // Added for consistent display of Ayah number
         juzLabel: "الجزء", // Added for consistent display of Juz number
         supportWork: "ادعم صانع التطبيق", // New translation for donation message
-        copyrightInfo: "حقوق النشر © 2024 أَيْنَ وَرَدَتْ", // Arabic copyright info
+        copyrightInfo: "حقوق النشر © 2025 أَيْنَ وَرَدَتْ", // Arabic copyright info
         hintButton: "تلميح", // New translation for hint button
-        messageInvalidSurahName: "الرجاء استخدام القائمة لاختيار الإجابة!", // New translation for invalid surah name
+        messageInvalidSurahName: "!الرجاء استخدام القائمة لاختيار الإجابة", // New translation for invalid surah name
         juzs: {
             1: "الجزء ١", 2: "الجزء ٢", 3: "الجزء ٣", 4: "الجزء ٤", 5: "الجزء ٥",
             6: "الجزء ٦", 7: "الجزء ٧", 8: "الجزء ٨", 9: "الجزء ٩", 10: "الجزء ١٠",
@@ -1038,7 +1038,7 @@ const App = () => {
                             {/* Search Bar for Surahs */}
                             <input
                                 type="text"
-                                placeholder={language === 'ar' ? "ابحث عن السورة..." : "Search Surah..."}
+                                placeholder={language === 'ar' ? "ابحث عن السورة" : "Search Surah..."}
                                 value={surahSearchTerm}
                                 onChange={(e) => setSurahSearchTerm(e.target.value)}
                                 className="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-emerald-500"
@@ -1301,7 +1301,7 @@ const App = () => {
             )}
 
             {/* Donation Area - Always Visible */}
-            <div className="fixed bottom-0 left-0 right-0 p-3 bg-emerald-50 bg-opacity-95 rounded-t-3xl shadow-2xl flex flex-col sm:flex-row sm:justify-center sm:items-center sm:gap-x-4 gap-y-1 z-50">
+            <div className="fixed bottom-0 left-0 right-0 p-3 bg-emerald-50 bg-opacity-95 rounded-t-3xl shadow-2xl flex flex-col sm:flex-row sm:justify-center sm:items-center sm:gap-x-4 gap-y-1 z-50 text-center">
                 <a
                     href={KO_FI_LINK}
                     target="_blank"
